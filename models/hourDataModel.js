@@ -9,7 +9,7 @@ class HourModel  extends  DayModel{
 
 }
 HourModel.getInsertSqlValue=function(m){
-        return '(' + '\'' + m._site_id + '\','  + m._report_time +','
+        return '(' + '\'' + m._site_id + '\',\''  + m._report_time +'\','
         + m._visit + ',' + m._pv + ',' + m._bounce + ',' + m._uv + ',' + m._new_visitor + ',' + m._time_on_site + ',' + m._ip + ','
         + m._city_id + ',' + m._refer_type + ',' + m._device_type +','+m._hour+')';
 }

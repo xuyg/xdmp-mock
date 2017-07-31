@@ -3,7 +3,7 @@ var Mock = require('mockjs');
 var cityArray = [110000, 120000, 130100, 130200, 130300, 130400, 130500, 130600, 130700, 130800, 130900, 131000, 131100];
 var referType = [1, 2, 3, 4];
 var deviceType = [1, 2];
-
+var urlArray=['http://www.rrrr.com/?wwq=s','http://www.eeeee.com/?q=x','https://www.baidu.com/?utm_source=baidu_brand&utm_medium=cpc&','https://www.zhongan.com/?utm_source=baidu_brand&utm_medium=cpc&','http://www.sina.com.cn/?query=xx','http://so.com/?q=xx']
 
 module.exports={
 	randomCity:function () {
@@ -17,5 +17,8 @@ module.exports={
 	},
 	randomNum(){
 		return  Mock.mock({ "data|1-1000": 1000 }).data
+	},
+	randomUrl(){
+		return  Mock.mock({ "data|1": urlArray }).data;
 	}
 }

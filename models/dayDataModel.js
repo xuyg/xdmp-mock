@@ -21,7 +21,7 @@ DayModel.getInsertSqlValue=function(m){
 DayModel.getBatchInsertSql=function(array){
     var sql=[];
      array.forEach(p=>sql.push(DayModel.getInsertSqlValue(p)));
-    return 'inset into ( site_id, report_time, visit, pv, bounce, uv, new_visitor, time_on_site, ip,city_id, refer_type, device_type) values '
+    return 'insert into  s_flow_daily_refer_device_city( site_id, report_time, visit, pv, bounce, uv, new_visitor, time_on_site, ip,city_id, refer_type, device_type) values '
     +'\n'+ sql.join(',\n')+';\n' 
 }
 module.exports=DayModel;
